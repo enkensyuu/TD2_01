@@ -9,6 +9,7 @@
 #include "Sprite.h"
 #include "ViewProjection.h"
 #include "WorldTransform.h"
+#include"Player.h"
 
 /// <summary>
 /// ゲームシーン
@@ -47,6 +48,16 @@ class GameScene {
 	Audio* audio_ = nullptr;
 	DebugText* debugText_ = nullptr;
 
+	// テクスチャハンドル
+	uint32_t textureHandle_ = 0;
+
+	// 3Dモデル
+	Model* model_ = nullptr;
+
+	// 自キャラ
+	Player* player_ = nullptr;
+
+	ViewProjection viewProjection_;
 	/// <summary>
 	/// ゲームシーン用
 	/// </summary>
