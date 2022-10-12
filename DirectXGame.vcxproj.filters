@@ -49,12 +49,6 @@
     <Filter Include="ヘッダー ファイル\math">
       <UniqueIdentifier>{647f4977-924a-4954-923f-5619e5afc9a3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ヘッダー ファイル\Enemy">
-      <UniqueIdentifier>{ffc45e2c-f34c-411c-a4b1-bbdffcc8d7ed}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\Enemy">
-      <UniqueIdentifier>{5718433c-ed12-4c8c-ad69-756daa361059}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -71,24 +65,6 @@
     </ClCompile>
     <ClCompile Include="scene\GameScene.cpp">
       <Filter>ソース ファイル\scene</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>ソース ファイル\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy2.cpp">
-      <Filter>ソース ファイル\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy3.cpp">
-      <Filter>ソース ファイル\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy4.cpp">
-      <Filter>ソース ファイル\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy5.cpp">
-      <Filter>ソース ファイル\Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy6.cpp">
-      <Filter>ソース ファイル\Enemy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -178,24 +154,6 @@
     </ClInclude>
     <ClInclude Include="3d\TerrainCommon.h">
       <Filter>ヘッダー ファイル\3d</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>ヘッダー ファイル\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy2.h">
-      <Filter>ヘッダー ファイル\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy3.h">
-      <Filter>ヘッダー ファイル\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy4.h">
-      <Filter>ヘッダー ファイル\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy5.h">
-      <Filter>ヘッダー ファイル\Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy6.h">
-      <Filter>ヘッダー ファイル\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

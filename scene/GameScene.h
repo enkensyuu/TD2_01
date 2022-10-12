@@ -13,8 +13,7 @@
 /// <summary>
 /// ゲームシーン
 /// </summary>
-class GameScene
-{
+class GameScene {
 
   public: // メンバ関数
 	/// <summary>
@@ -43,17 +42,10 @@ class GameScene
 	void Draw();
 
   private: // メンバ変数
-	  ViewProjection viewProjection_;
-
-
 	DirectXCommon* dxCommon_ = nullptr;
 	Input* input_ = nullptr;
 	Audio* audio_ = nullptr;
 	DebugText* debugText_ = nullptr;
-
-	
-
-	
 
 	/// <summary>
 	/// ゲームシーン用
