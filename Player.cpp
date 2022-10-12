@@ -1,25 +1,30 @@
 #include "Player.h"
 #include <cassert>
+#include"Procession.h"
 
-void Player::Initialize(Model* model, uint32_t textureHandle)
+void Player::Initialize(Model* model, Sprite* sprite, uint32_t textureHandle)
 {
-	HeightFlag = 1;
+	HeightFlag = true;
 
-	WidthFlag = 0;
+	WidthFlag = false;
 
 	assert(model);
+
+	assert(sprite);
 
 	model_ = model;
 
 	textureHandle_ = TextureManager::Load("mario.jpg");
 
+	
+
 	debugText_ = DebugText::GetInstance();
 
 	input_ = Input::GetInstance();
 
-	worldTransform_->Initialize();
+	worldTransform_.Initialize();
 
-	worldTransform_->translation_ = { 0,3,100 };
+	worldTransform_.translation_ = { 0,3,100 };
 }
 
 void Player::Update()
@@ -35,9 +40,18 @@ void Player::Update()
 			move.y += Speed;
 		}
 	}
+
+	// s—ñXV
+	worldTransform_.matWorld_ = Mat_Identity();
+	worldTransform_.matWorld_ = MatWorld(worldTransform_.scale_, worldTransform_.rotation_, worldTransform_.translation_);
+
+	worldTransform_.matWorld_ *= worldTransform_.parent_->matWorld_;
+
+	worldTransform_.TransferMatrix();
 }
 
 void Player::Draw(ViewProjection& viewProjection_)
 {
-	model_->Draw(worldTransform_, viewProjection_,textureHandle_);
+	sprite_ = Sprite::Create(textureHandle_, { worldTransform_.translation_.x,worldTransform_.translation_.y });
+	//model_->Draw(worldTransform_, viewProjection_, textureHandle_);
 }

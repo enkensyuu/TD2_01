@@ -14,7 +14,7 @@ public:
 	/// <summary>
 	/// 初期化
 	/// </summary>
-	void Initialize(Model* model, uint32_t textureHandle);
+	void Initialize(Model* model, Sprite* sprite, uint32_t textureHandle);
 
 	/// <summary>
 	/// 更新
@@ -24,10 +24,10 @@ public:
 	/// <summary>
 	/// 描画
 	/// </summary>
-	void Draw(ViewProjection&viewProjection_);
+	void Draw(ViewProjection& viewProjection_);
 
 private:
-	WorldTransform* worldTransform_;
+	WorldTransform worldTransform_;
 
 	DebugText* debugText_ = nullptr;
 
@@ -35,11 +35,13 @@ private:
 
 	Model* model_ = nullptr;
 
+	Sprite* sprite_ = nullptr;
+
 	uint32_t textureHandle_ = 0u;
 
 	// 縦フラグ
-	int HeightFlag;
+	bool HeightFlag;
 
 	// 横フラグ
-	int WidthFlag;
+	bool WidthFlag;
 };

@@ -54,6 +54,8 @@ class GameScene {
 	// 3Dモデル
 	Model* model_ = nullptr;
 
+	Sprite* sprite_ = nullptr;
+
 	// 自キャラ
 	Player* player_ = nullptr;
 
